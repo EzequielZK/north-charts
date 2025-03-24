@@ -43,7 +43,7 @@
 </script>
 
 <main class="h-full">
-	<header class="dark:bg-primary sticky top-0 px-8 py-4 shadow-md">
+	<header class="dark:bg-primary bg-foreground sticky top-0 px-8 py-4 shadow-md">
 		{#if loadingLogo}
 			<Spinner color="white" size={8} />
 		{:else if isDarkMode}
@@ -61,7 +61,6 @@
 						style: 'currency',
 						currency: 'USD'
 					})}
-					valueStyle="text-green-400"
 				/>
 				<DataCard
 					title="Current Month Savings"
@@ -69,16 +68,12 @@
 						style: 'currency',
 						currency: 'USD'
 					})}
-					valueStyle="text-accent"
 				/>
-				<DataCard
-					title="Percentage Change"
-					value={`${overview?.percentageChange}%`}
-					valueStyle="text-amber-400"
-				/>
+				<DataCard title="Percentage Change" value={`${overview?.percentageChange}%`} />
 			</div>
 
 			<BarChart
+				{isDarkMode}
 				labelKey="month"
 				dataKey="savings"
 				dataLabel="Savings"
@@ -89,6 +84,7 @@
 		<div class="flex h-full w-full flex-1 flex-col gap-6">
 			<div class="md:flex-[1_0_400px]">
 				<HorizontalBar
+					{isDarkMode}
 					labelKey="service"
 					dataKey="savings"
 					dataLabel="Categories"

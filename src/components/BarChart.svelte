@@ -12,6 +12,7 @@
 	export let labelKey: keyof SavingTrend;
 	export let data: SavingTrend[];
 	export let dataLabel: string;
+	export let isDarkMode: boolean;
 
 	export let title: string;
 
@@ -60,7 +61,7 @@
 					},
 					legend: {
 						labels: {
-							color: '#f8fcfd'
+							color: isDarkMode ? '#f8fcfd' : '#1e2125'
 						}
 					}
 				},
@@ -74,18 +75,24 @@
 									currency: 'USD'
 								});
 							},
-							color: '#f8fcfd'
+							color: isDarkMode ? '#f8fcfd' : '#1e2125'
 						}
 					},
 					x: {
 						ticks: {
-							color: '#f8fcfd'
+							color: isDarkMode ? '#f8fcfd' : '#1e2125'
 						}
 					}
 				}
 			}
 		});
 	};
+
+	$: if (isDarkMode) {
+		createChart();
+	} else {
+		createChart();
+	}
 
 	onMount(() => {
 		createChart();
@@ -114,14 +121,14 @@
 </script>
 
 <div
-	class="dark:bg-primary dark:text-foreground flex flex-col rounded-lg p-4 shadow-md md:flex-1 md:p-8"
+	class="dark:bg-primary dark:text-foreground bg-foreground flex flex-col rounded-lg p-4 shadow-md md:flex-1 md:p-8"
 >
 	<div class="flex items-center justify-between">
 		<h2 class="flex-1 text-2xl font-bold md:text-3xl">{title}</h2>
 		<div class="flex gap-4">
 			<div class="md:min-w-40">
 				<Select
-					class="dark:bg-primary! flex-0"
+					class="dark:bg-primary! bg-foreground! flex-0"
 					placeholder="Order"
 					value={orderFilterValue || ''}
 					on:change={handleChange}
