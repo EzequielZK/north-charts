@@ -1,6 +1,7 @@
 {
 	"name": "north-charts",
 	"version": "0.0.1",
+	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev --port 3000",
 		"build": "vite build && npm run prepack",
