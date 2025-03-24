@@ -41,6 +41,8 @@
 	--color-foreground: #f8fcfd;
 	--color-background: #2b2f34;
 	--color-accent: #00ddd1;
+	--color-nebula: #d591fe;
+	--color-nebula-100: #f8dafe;
 }
 
 body {

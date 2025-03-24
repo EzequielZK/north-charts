@@ -127,7 +127,7 @@
 		<div class="flex gap-4">
 			<div class="md:min-w-40">
 				<Select
-					class="dark:bg-primary! flex-0"
+					class="dark:bg-primary! bg-foreground!  flex-0"
 					placeholder="Order"
 					value={orderFilterValue || ''}
 					on:change={handleChange}

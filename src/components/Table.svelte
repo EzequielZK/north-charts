@@ -44,7 +44,7 @@
 			</TableHead>
 			<TableBody tableBodyClass="divide-y">
 				<TableBodyRow
-					class="dark:odd:bg-primary! dark:even:bg-background border-none"
+					class="dark:odd:bg-primary! dark:even:bg-background odd:bg-primary/20 even:bg-background/10 border-none"
 					slot="row"
 					let:item
 				>
