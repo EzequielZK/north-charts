@@ -12,7 +12,7 @@
 		Overview,
 		SavingByCategory,
 		SavingTrend
-	} from '../lib/types.js';
+	} from '../lib/index.ts';
 	import type { PageProps } from './$types.js';
 
 	let { data }: PageProps = $props() as { data: Data };

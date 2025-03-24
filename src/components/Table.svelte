@@ -8,7 +8,7 @@
 		TableHead,
 		TableHeadCell
 	} from 'flowbite-svelte';
-	import type { DetailedSaving } from '../lib/types.js';
+	import type { DetailedSaving } from '../lib/index.ts';
 
 	export let title: string;
 

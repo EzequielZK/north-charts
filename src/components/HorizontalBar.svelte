@@ -3,7 +3,7 @@
 	import Chart from 'chart.js/auto';
 	import { Select, Tooltip } from 'flowbite-svelte';
 	import type { TooltipItem } from 'chart.js';
-	import type { SavingByCategory } from '../lib/types.ts';
+	import type { SavingByCategory } from '../lib/index.ts';
 	import CustomIconButton from './CustomIconButton.svelte';
 	import RotateCcw from '@lucide/svelte/icons/rotate-ccw';
 

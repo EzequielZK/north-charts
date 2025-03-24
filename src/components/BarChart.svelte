@@ -4,7 +4,7 @@
 	import Select from 'flowbite-svelte/Select.svelte';
 	import Tooltip from 'flowbite-svelte/Tooltip.svelte';
 	import type { TooltipItem } from 'chart.js';
-	import type { SavingTrend } from '../lib/types.js';
+	import type { SavingTrend } from '../lib/index.ts';
 	import CustomIconButton from './CustomIconButton.svelte';
 	import RotateCcw from '@lucide/svelte/icons/rotate-ccw';
 
